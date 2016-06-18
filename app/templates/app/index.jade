@@ -1,0 +1,9 @@
+- load staticfiles
+- load pipeline
+!!! 5
+html(lang="en")
+    head
+        title= items.Title
+        - stylesheet 'custom'
+    body
+        h1.title= items.Title
