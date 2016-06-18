@@ -55,4 +55,4 @@ target/
 
 .vagrant/
 *.sqlite3
-static/
+/static/
