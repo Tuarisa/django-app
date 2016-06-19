@@ -149,9 +149,35 @@ PIPELINE_CSS = {
     },
 }
 
+PIPELINE_JS = {
+    'jquery': {
+        'source_filenames': (
+          'jquery/*.js',
+          'js/*.js',
+        ),
+        'output_filename': 'js/jquery.js',
+    },
+    'bootstrap': {
+        'source_filenames': (
+          'bootstrap/js/tooltip.js',
+          'bootstrap/js/*.js',
+        ),
+        'output_filename': 'js/bootstrap.js',
+    },
+    'scripts': {
+        'source_filenames': (
+          'js/*.js',
+        ),
+        'output_filename': 'js/app.js',
+    }
+}
+
+
 PIPELINE = {}
 PIPELINE['STYLESHEETS'] = PIPELINE_CSS
+PIPELINE['JAVASCRIPT'] = PIPELINE_JS
 PIPELINE['COMPILERS'] = (
   'pipeline.compilers.stylus.StylusCompiler',
 )
 PIPELINE['CSS_COMPRESSOR'] = ''
+PIPELINE['JS_COMPRESSOR'] = ''

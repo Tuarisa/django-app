@@ -2,9 +2,25 @@
 - load pipeline
 !!! 5
 html(lang="en")
-    head
-        title= items.Title
-        - stylesheet 'custom'
-    body
-        h1.title= items.Title
-        p fdf fdsfasdf
+	head
+		title= items.Title
+		- stylesheet 'custom'
+		- javascript 'jquery'
+		- javascript 'bootstrap'
+		- javascript 'scripts'
+	body
+		h1.title= items.Title
+		.btn-group
+			button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+					| Action 
+					span.caret
+				ul.dropdown-menu
+					li
+						a(href='#') Action
+					li
+						a(href='#') Another action
+					li
+						a(href='#') Something else here
+					li.divider(role='separator')
+					li
+						a(href='#') Separated link
