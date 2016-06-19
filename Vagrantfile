@@ -22,6 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.network "forwarded_port", guest: 8000, host: 8000
+  config.vm.network :forwarded_port, guest: 35729, host: 35729
 
   config.vm.synced_folder ".", "/home/vagrant/#{project_name}"
 

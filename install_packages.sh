@@ -20,7 +20,8 @@ fi
 
 su - vagrant -c "/usr/local/bin/virtualenv $VIRTUALENV_DIR && \
 	    echo $PROJECT_DIR > $VIRTUALENV_DIR/.project && \
-	        PIP_DOWNLOAD_CACHE=/home/vagrant/.pip_download_cache $VIRTUALENV_DIR/bin/pip3 install -r $PROJECT_DIR/requirements.txt"
+	        PIP_DOWNLOAD_CACHE=/home/vagrant/.pip_download_cache $VIRTUALENV_DIR/bin/pip3 install -r $PROJECT_DIR/requirements.txt && \
+            $VIRTUALENV_DIR/bin/pip3 install https://github.com/Tuarisa/django-livereload-server/archive/master.zip"
 
 
 su - vagrant -c "echo '. /usr/local/bin/virtualenvwrapper.sh' > /home/vagrant/.bashrc"
